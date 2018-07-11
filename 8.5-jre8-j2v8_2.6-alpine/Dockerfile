@@ -6,7 +6,7 @@ ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
 WORKDIR $CATALINA_HOME
 
-RUN apk add --no-cache libstdc++ bash tzdata
+RUN apk add --no-cache libstdc++ bash tzdata font-adobe-100dpi ttf-dejavu
 
 # let "Tomcat Native" live somewhere isolated
 ENV TOMCAT_NATIVE_LIBDIR $CATALINA_HOME/native-jni-lib
